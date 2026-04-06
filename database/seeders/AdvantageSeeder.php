@@ -14,17 +14,17 @@ class AdvantageSeeder extends Seeder
     {
         $advantages = [
             [
-                'name' => 'Advantage 1',
+                'title' => 'Advantage 1',
                 'description' => 'Description of Advantage 1',
                 'image' => 'advantage1.jpg',
             ],
             [
-                'name' => 'Advantage 2',
+                'title' => 'Advantage 2',
                 'description' => 'Description of Advantage 2',
                 'image' => 'advantage2.jpg',
             ],
             [
-                'name' => 'Advantage 3',
+                'title' => 'Advantage 3',
                 'description' => 'Description of Advantage 3',
                 'image' => 'advantage3.jpg',
             ],

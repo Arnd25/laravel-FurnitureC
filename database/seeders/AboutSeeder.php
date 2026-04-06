@@ -10,9 +10,9 @@ class AboutSeeder extends Seeder
     public function run(): void
     {
         About::create([
-            'title' => 'Title',
-            'description' => 'sfhdskjf hdskjfhdkjshdkjshfsdhfkjdhskfjhsdkjhf dkjshfk',
-            'image' => 'about.jpg',
+            'title' => 'Комфорт в каждой детали',
+            'description' => 'Мебель, созданная для тёплых вечеров и безопасного детства. Эргономичные формы, экологичные материалы и честные цены.',
+            'background'=> 'banner-bg.png'
         ]);
     }
 }
