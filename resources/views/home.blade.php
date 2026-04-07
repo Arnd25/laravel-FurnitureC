@@ -8,7 +8,7 @@
     @include('home.Promotions')
     @include('home.Products')
     @include('home.Advantages')
-    @include('home.Contact')
+    @include('home.Feedback')
     @include('home.Reviews')
 
 

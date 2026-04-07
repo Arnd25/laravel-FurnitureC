@@ -3,7 +3,7 @@
     <menu class="swiper promotions-swiper pb-10 ">
         <ul class="flex swiper-wrapper ">
             @foreach($promotions as $promotion)
-            <li class="swiper-slide h-auto bg-sky-50 border rounded-lg border-sky-200 p-5">
+            <li class="swiper-slide h-auto bg-teal-50 border rounded-lg border-teal-200 p-5">
                 <div class="grid grid-cols-2 justify-between gap-5 items-center">
                     <div class="flex   h-full flex-col gap-5">
                         <p class="text-xs text-gray-600 mb-2">Действует до {{$promotion->date}}</p>
@@ -11,10 +11,12 @@
                             <h3 class="text-2xl"> {{$promotion->title}}</h3>
                             <p class="text-gray-600">{{$promotion->description}}</p>
                         </div>
-                        <button class="bg-indigo-300  w-fit px-4 rounded-xl py-2 border border-indigo-400">Подробнее</button>
+                        <x-button class="w-fit text-lg py-2!">
+                            Подробнее
+                        </x-button>
                     
                     </div>
-                    <img class="bg-red-400    w-full h-full" src="{{asset('storage/images/'. $promotion->image)}}" alt="">
+                    <x-image  src="{{asset('storage/images/'. $promotion->image)}}" alt="{{ $promotion->title }}" width="400" height="400" />
                 </div>
             </li>
             @endforeach
