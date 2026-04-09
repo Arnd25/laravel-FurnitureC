@@ -1,10 +1,10 @@
 <div class="bg-emerald-900 w-full">
-    <x-container class="grid grid-cols-2 gap-10 py-20">
-        <div class="text-white flex flex-col gap-5">
+    <x-container class="grid lg:grid-cols-2 gap-10 py-20">
+        <div class="text-white order-2 lg:order-1 flex flex-col gap-5">
             <h2 class=" text-2xl font-medium">Как с нами связаться</h2>
             <div class="flex flex-col gap-5">
                 <p class="text-xl">Адрес:</p>
-                <div class="map-container" style="width: 100%; height: 400px;">
+                <div class="h-100">
                     <iframe 
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A6722de5422049490b3fd4f48bf14ba0f7240d1d85ef69d52ca18e418568380fc&amp;source=constructor"
                     width="100%"
@@ -17,23 +17,24 @@
                 <p class="text-xl">Мы в социальных сетях:</p>
                 <div class="flex gap-2">
                     <a href="#" class="text-emerald-400 hover:underline">
-                        <x-image src="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
                     </a>
                     <a href="#" class="text-emerald-400 hover:underline">
-                        <x-image src="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
                     </a>
                     <a href="#" class="text-emerald-400 hover:underline">
-                        <x-image src="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
                     </a>
                     <a href="#" class="text-emerald-400 hover:underline">
-                        <x-image src="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col bg-gray-100 h-fit gap-10 my-auto px-4 py-10 rounded-lg">
+        <div class="flex flex-col order-1 lg:order-2 bg-gray-100 h-fit gap-10 my-auto px-4 py-10 rounded-lg">
             <h2 class=" text-2xl font-semibold text-center">Напишите нам</h2>
-            <form method="POST" action="" class="flex flex-col gap-5">
+            <form method="POST" action="{{route('feedback.store')}}" class="flex flex-col gap-5">
+                @csrf
                 <div class="flex flex-col gap-5">
                     <div class="">
                         <label for="name">Ваше имя:</label>
@@ -49,6 +50,12 @@
                     Отправить
                 </x-button>
             </form> 
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                    {{ session('success') }}
+                </div>
+            @endif
+
         </div>
         
     </x-container>

@@ -1,6 +1,6 @@
 <x-container>
     <h2 class="text-4xl font-semibold py-10">Отзывы</h1>
-    <ul class="grid grid-cols-4 gap-10">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         @foreach($reviews as $review)
             <li class="flex flex-col bg-teal-700 text-white rounded-lg">
                 <div class="flex border-b pb-4 border-teal-400 shadow-lg gap-5">

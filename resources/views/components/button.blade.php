@@ -1,4 +1,6 @@
-@props(['class' => ''])
+@props([
+    'class' => '',
+])
 
 <button 
 type="submit"

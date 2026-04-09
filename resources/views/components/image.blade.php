@@ -1,6 +1,7 @@
 @props([
     'class' => '',
     'src' => 'https://placeholder.apptor.studio/200/200/product3.png',
+    'url'=> '',
     'alt' => 'text',
     'width'=> '200',
     'height' => '200',
@@ -9,9 +10,18 @@
 
 
 ])
+@php
 
-<img 
-src="{{ $src }}" 
+if($url) {
+    $image =$url;
+} else {
+    $image = asset('storage/'.$src);
+}
+
+@endphp
+
+<img
+src={{$image}} 
 alt="{{ $alt }}"
 size="{{ $size }}" 
 width="{{$width}}" 

@@ -14,25 +14,26 @@
                     <img class="w-30  h-10 bg-red-100" src="/" alt="logo" \>
                 </a>
             </div>
-            <x-button>
+            <x-button class="hidden lg:flex">
                 Каталог
             </x-button>
             
-            <div class="flex max-w-full w-full">
+            <div class=" hidden lg:flex max-w-full w-full">
                 <x-input-form class="rounded-r-none border-r-0" placeholder="найти..." />
                  <x-button  class=" px-3 flex rounded-l-none">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.76 13.24C8.42 10.9 8.42 7.09999 10.76 4.74999C13.1 2.41 16.9 2.41 19.25 4.74999C21.59 7.08999 21.59 10.89 19.25 13.24C16.91 15.58 13.11 15.58 10.76 13.24Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10.5 13.5L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                </x-button></div>
+                </x-button>
+            </div>
             
         
             
             
             
             <div class="flex items-center ml-auto gap-5">
-                <menu class="">
+                <menu class="hidden lg:block">
                     <ul class="flex text-xl font-semibold items-center gap-10">
                         <li><a  href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
@@ -51,7 +52,7 @@
         @yield('content')
     </main>
     <footer class="bg-emerald-900">
-        <x-container class="mb-0 grid text-white py-10 gap-5 grid-cols-4">
+        <x-container class="my-0! grid text-white py-10 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <div class="flex flex-col items-center gap-5">
                 <x-image class="max-h-20 max-w-100" width=200 height=50 />
                 <p>ki dsgdflkg jdfjgdfkldsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjgj</p>
@@ -67,7 +68,17 @@
                 </div>
             </div>
             <div class="">ghfgfhfhff</div>
-            <div class="">43343</div>
+            <div class="flex flex-col gap-4">
+                <p>Где нас найти:</p>
+                <div class="h-50">
+                    <iframe 
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A6722de5422049490b3fd4f48bf14ba0f7240d1d85ef69d52ca18e418568380fc&amp;source=constructor"
+                    width="100%"
+                    height="100%"
+                    class="rounded-lg"
+                    ></iframe>
+                </div>
+            </div>
         </x-container>
     </footer>
 </body>
