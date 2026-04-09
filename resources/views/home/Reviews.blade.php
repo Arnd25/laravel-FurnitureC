@@ -1,17 +1,19 @@
 <x-container>
     <h2 class="text-4xl font-semibold py-10">Отзывы</h1>
     <ul class="grid grid-cols-4 gap-10">
-        <li class="flex flex-col bg-gray-400 rounded-lg p-4 gap-5">
-            <div class="flex gap-2">
-                <x-image class="rounded-full! max-h-13 max-w-13" />
-                <div>
-                    <h3 class="text-lg font-medium">djfhjfhg jhdfsgdjfhs djhsf</h3>
+        @foreach($reviews as $review)
+            <li class="flex flex-col bg-teal-700 text-white rounded-lg">
+                <div class="flex border-b pb-4 border-teal-400 shadow-lg gap-5">
+                    <x-image src="{{ $review->image }}" class="rounded-full! max-h-13 max-w-13 ml-4 mt-4" />
                     <div class="">
-                        Здесь рейтинг
+                        <h3 class="text-lg mt-4 mr-4 font-medium">{{ $review->name }}</h3>
+                        <div class="">
+                            {{ $review->rating }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <p class="text-white text-lg">sdfdsfdsfds fds fds fsd fdsfds dsf dsfds fdsfsd fdsf dsfsd fdsf sdfds fdsf dsfsd fdsfdsfds dsf</p>
-        </li>
+                <p class="text-lg p-5">{{ $review->comment }}</p>
+            </li>
+        @endforeach
     </ul>   
 </x-container>

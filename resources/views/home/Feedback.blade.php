@@ -12,8 +12,8 @@
                     class="rounded-lg"
                     ></iframe>
                 </div>
-                <p class="text-xl">Телефон: <a href="tel:+79999999999" class="text-emerald-400 hover:underline">+7 (999) 999-99-99</a></p>
-                <p class="text-xl">Почта: <a href="mailto:info@furniture.com" class="text-emerald-400 hover:underline">info@furniture.com</a></p>
+                <p class="text-xl">Телефон: <a href="tel:+79999999999" class="text-emerald-400 hover:underline">{{ $contact->phone }}</a></p>
+                <p class="text-xl">Почта: <a href="mailto:{{ $contact->email }}" class="text-emerald-400 hover:underline">{{ $contact->email }}</a></p>
                 <p class="text-xl">Мы в социальных сетях:</p>
                 <div class="flex gap-2">
                     <a href="#" class="text-emerald-400 hover:underline">
@@ -33,8 +33,8 @@
         </div>
         <div class="flex flex-col bg-gray-100 h-fit gap-10 my-auto px-4 py-10 rounded-lg">
             <h2 class=" text-2xl font-semibold text-center">Напишите нам</h2>
-            <form action="" class="flex flex-col gap-5">
-                <div class="grid grid-cols-2 gap-5">
+            <form method="POST" action="" class="flex flex-col gap-5">
+                <div class="flex flex-col gap-5">
                     <div class="">
                         <label for="name">Ваше имя:</label>
                         <x-input-form class="" placeholder="Ваше имя" name="name"/>

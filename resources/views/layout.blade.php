@@ -50,5 +50,25 @@
     <main>
         @yield('content')
     </main>
+    <footer class="bg-emerald-900">
+        <x-container class="mb-0 grid text-white py-10 gap-5 grid-cols-4">
+            <div class="flex flex-col items-center gap-5">
+                <x-image class="max-h-20 max-w-100" width=200 height=50 />
+                <p>ki dsgdflkg jdfjgdfkldsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjdsgdflkg jdfjgdfklgjgj</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h2 class="text-2xl font-medium">Навигация</h2>
+                <div class="flex flex-col gap-1">
+                    <p>dsd</p>
+                    <p>dsd</p>
+                    <p>dsd</p>
+                    <p>dsd</p>
+                    <p>dsd</p>
+                </div>
+            </div>
+            <div class="">ghfgfhfhff</div>
+            <div class="">43343</div>
+        </x-container>
+    </footer>
 </body>
 </html>

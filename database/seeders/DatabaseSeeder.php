@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             ProductsSeeder::class,
             PromotionSeeder::class,
             ReviewSeeder::class,
-        
+            FeedbackSeeder::class,
         ]);
         // // User::factory(10)->create();
 
