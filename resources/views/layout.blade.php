@@ -36,7 +36,7 @@
                 <menu class="hidden lg:block">
                     <ul class="flex text-xl font-semibold items-center gap-10">
                         <li><a  href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li><a href="/admin">Admin</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </menu>
@@ -48,10 +48,10 @@
             </div>
         </x-container>
     </header>
-    <main>
+    <main >
         @yield('content')
     </main>
-    <footer class="bg-emerald-900">
+    <footer class="bg-emerald-900 mt-auto">
         <x-container class="my-0! grid text-white py-10 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <div class="flex flex-col items-center gap-5">
                 <x-image class="max-h-20 max-w-100" width=200 height=50 />
@@ -67,7 +67,30 @@
                     <p>dsd</p>
                 </div>
             </div>
-            <div class="">ghfgfhfhff</div>
+            <div class="">
+                <div class="text-white order-2 lg:order-1 flex flex-col gap-5">
+            <h2 class=" text-2xl font-medium">Контактная информация</h2>
+            <div class="flex flex-col gap-5">
+                <p class="text-xl">Телефон: <a href="tel:+79999999999" class="text-emerald-400 hover:underline">123575682</a></p>
+                <p class="text-xl">Почта: <a href="mailto: mail@mail.com" class="text-emerald-400 hover:underline">mail@mail.com</a></p>
+                <p class="text-xl">Мы в социальных сетях:</p>
+                <div class="flex gap-2">
+                    <a href="#" class="text-emerald-400 hover:underline">
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                    </a>
+                    <a href="#" class="text-emerald-400 hover:underline">
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                    </a>
+                    <a href="#" class="text-emerald-400 hover:underline">
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                    </a>
+                    <a href="#" class="text-emerald-400 hover:underline">
+                        <x-image url="https://upload.wikimedia.org/wikipedia/commons/1/12/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_MAX.svg" alt="max" width="40" height="40"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+            </div>
             <div class="flex flex-col gap-4">
                 <p>Где нас найти:</p>
                 <div class="h-50">

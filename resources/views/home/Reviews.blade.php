@@ -1,4 +1,4 @@
-<x-container>
+<x-container class="py-15">
     <h2 class="text-4xl font-semibold py-10">Отзывы</h1>
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         @foreach($reviews as $review)

@@ -1,4 +1,4 @@
-<x-container class="">
+<x-container class="py-20">
     <h2 class="text-4xl font-semibold py-10">Почему мы</h1>
     <ul class="grid lg:grid-cols-2 gap-10">
         @foreach($advantages as $advantage)

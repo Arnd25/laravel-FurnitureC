@@ -1,4 +1,4 @@
-<x-container class="flex flex-col gap-10">  
+<x-container class="flex flex-col py-10 gap-10">  
     <h2 class="text-4xl font-semibold mt-20">Товары</h2>
     <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
         @foreach($products as $product)

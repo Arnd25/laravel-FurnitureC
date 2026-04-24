@@ -9,9 +9,9 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 500,
     grabCursor: true,
-    autoplay: {
-        delay: 5000,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
     watchOverflow: true,
     navigation: {
         nextEl: '.swiper-button-next',
